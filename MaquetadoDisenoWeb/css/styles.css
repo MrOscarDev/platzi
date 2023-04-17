@@ -1,0 +1,159 @@
+/* Class Css que realiza animacion inicial[loader] , la cual al referescar la pagina esta se ejecuta */
+body{
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #FEF9E7;
+    font-family: 'Karla', sans-serif;
+    font-family: 'Krub', sans-serif;
+}
+.page{
+    height: 100vh;
+    position: relative;
+    
+
+}
+.container{
+/* se declara position absolute para poder usar z-index */
+position: absolute;
+z-index:1;
+}
+.nav-container{
+    background-color: #28B463;
+   padding: 20px 0 ;
+  
+}
+.nav-container a{
+    color:black ;
+    text-decoration: none;
+    font-weight: 600;
+   font-size: 40px;
+}
+.nav-container a:hover{
+    color:orange ;
+    
+    font-weight: 800;
+  
+
+}
+
+.nav-container ul{
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    
+  margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.textMain{
+    font-size: 30px;
+}
+.main-content{
+    margin: 0 100px;
+}
+.p-main{
+    font-size: 30px;
+    margin: 0;
+}
+.main-content h1{
+    font-size: 50px;
+    margin: 0 20px;
+}
+
+.loader{
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index:3;
+    animation: loader 2s linear forwards;
+
+}
+.div-welcome{
+    color: white;
+    font-size: 100px;
+    font-weight:800;
+}
+.loader div {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transform: scale(0);
+    /* es la veolidad en que se ejecuta la animacion de las hijas */
+    animation: scaling 2s ease-in-out infinite;
+}
+.loader p {
+   
+    animation: scaling 2s ease-in-out infinite;
+   
+}
+/* Esto es para que se ejecute la animacion por tiempos en orden separados */
+.loader div:nth-child(1){
+    animation-delay:0.2s
+}
+.loader div:nth-child(2){
+    animation-delay:0.4s
+}
+.loader div:nth-child(3){
+    /* el tiempo en que tarda en ejecutar la animacion o en salir la burbuja */
+    animation-delay:0.6s
+}
+@keyframes scaling {
+
+    0%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+@keyframes loader{
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    95%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+.site-content{
+    background-color: #FAD7A0;
+    padding: 150px;
+}
+.site-content img{
+    width: 400px;
+}
+
+.site-footer{
+    background-color:#D5D8DC;
+    margin: 0;
+}
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+}
+.site-footer img{
+    width: 200px;
+    
+}

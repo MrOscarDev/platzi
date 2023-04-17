@@ -1,0 +1,48 @@
+body{
+    background-color: #41478D;
+}
+.tittle{
+    color: white;
+    text-align: center;
+}
+
+.orange{
+    width: 100px;
+    height:100px;
+    background-color: orange;
+   
+}
+.blue{
+    width: 100px;
+    height:100px;
+    background-color: blue;
+    
+}
+.green{
+background-color: green;   
+width: 100px;
+height:100px; 
+}
+.card{
+    margin-top: 10px;
+   background-color: #F9E79F;
+    padding: 50px 50px;
+}
+.positionStatic{
+    position: static;
+}
+/* Este position siempre toma de base al primer objeto. tomando medidas de ahi */
+/* como en este ejemplo la caja naranja fue la base y la azul la de la posicion relativa */
+.positionRelative{
+position: relative;
+bottom: 100px;
+left: 110px;
+}
+
+/* Esta posicion lo que hace es de ciertas forma elimiar el area que esta ocupando
+creando un efecto de levitacion ya que el resto de componentes que le seguian ,tomaro su 
+espacio en la pantalla */
+.positionAbsolute{
+    position: absolute;
+    left: 70px;
+}
